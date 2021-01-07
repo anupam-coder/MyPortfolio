@@ -100,6 +100,12 @@ function gitOpen(){
   window.open("https://github.com/anupam-coder");
 }
 
+linkedin.addEventListener('click', liOpen);
+
+function liOpen(){
+ window.open("https://www.linkedin.com/in/anupam-patra-921634ab/");	
+}
+
 // twitter.addEventListener('click', tweet)
 
 // function tweet(){
