@@ -106,8 +106,3 @@ function liOpen(){
  window.open("https://www.linkedin.com/in/anupam-patra-921634ab/");	
 }
 
-// twitter.addEventListener('click', tweet)
-
-// function tweet(){
-//   alert(`Sorry, I am not on twitter. May be in future i will create one`);
-// }
