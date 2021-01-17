@@ -49,15 +49,13 @@ document.addEventListener("keyup", e => {
 
 */
 
-
-
 let github = document.querySelector(".fa-github");
-let twitter = document.querySelector(".fa-twitter");
-let facebook = document.querySelector(".fa-facebook");
-let insta = document.querySelector(".fa-instagram");
-let watsapp = document.querySelector(".fa-whatsapp");
+//let twitter = document.querySelector(".fa-twitter");
+//let facebook = document.querySelector(".fa-facebook");
+//let insta = document.querySelector(".fa-instagram");
+//let watsapp = document.querySelector(".fa-whatsapp");
 let linkedin = document.querySelector(".fa-linkedin");
-let youtube = document.querySelector(".fa-youtube");
+//let youtube = document.querySelector(".fa-youtube");
 
 github.addEventListener('click', gitOpen);
 
