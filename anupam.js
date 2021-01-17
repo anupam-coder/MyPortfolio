@@ -49,41 +49,6 @@ document.addEventListener("keyup", e => {
 
 */
 
-var send = document.querySelector(".contact-form");
-
-send.addEventListener("submit", sendMsg);
-
-function sendMsg() {
-
-/**
- * @type HTMLInputElement
- */
-var name = document.getElementById("name").value;
-var email = document.querySelector("#email").value;
-var subject = document.querySelector("#subject").value;
-var msg = document.querySelector("#message").value;
-Email.send({
-  Host: "smtp.gmail.com",
-  Username : "anupampatra1995@gmail.com",
-  Passowrd : "guddupatra",
-  To : 'anupampatra1995@gmail.com',
-From : "anupampatra1995@gmail.com",
-Subject : `${subject}`,
-Body : `From:${email} Message:${msg}`,
-}).then((message) => alert(`Dear ${name}, your mail has been sent successfully`));
-//sendEmail(name, email, subject, msg);
-	// Email.send({
-	// Host: "smtp.gmail.com",
-	// Username : "<sender’s email address>",
-	// Password : "<email password>",
-	// To : '<recipient’s email address>',
-	// From : "<sender’s email address>",
-	// Subject : "<email subject>",
-	// Body : "<email body>",
-	// }).then(
-	// 	message => alert("mail sent successfully")
-	// );
-}
 
 
 let github = document.querySelector(".fa-github");
@@ -105,4 +70,47 @@ linkedin.addEventListener('click', liOpen);
 function liOpen(){
  window.open("https://www.linkedin.com/in/anupam-patra-921634ab/");	
 }
+
+
+//************SENDING MAIL ************/
+
+var send = document.getElementById("send");
+
+send.addEventListener("submit", sendMsg);
+
+function sendMsg() {
+
+/**
+ * @type HTMLInputElement
+ */
+var name = document.getElementById("name").value;
+var email = document.querySelector("#email").value;
+var subject = document.querySelector("#subject").value;
+var msg = document.querySelector("#message").value;
+console.log(name, email, subject, msg);
+Email.send({
+  Host: "smtp.gmail.com",
+  Username : "anupampatra1995@gmail.com",
+  Passowrd : "guddupatra",
+  To : 'anupampatra1995@gmail.com',
+From : "anupampatra1995@gmail.com",
+Subject : `${subject}`,
+Body : `From:${email} Message:${msg}`,
+}).then((message) => alert(`Dear ${name}, your mail has been sent successfully`));
+sendEmail(name, email, subject, msg);
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "<sender’s email address>",
+	Password : "<email password>",
+	To : '<recipient’s email address>',
+	From : "<sender’s email address>",
+	Subject : "<email subject>",
+	Body : "<email body>",
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
+
+
+
 
